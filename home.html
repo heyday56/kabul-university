@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kabul University</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="lib/all.css">
+</head>
+<body>
+	<nav  class="menuNav">
+		<label id="logo">Kabul University</label>
+		<ul class="menuUl">
+			<li class="active">
+				<a href="home.html">Home</a>
+			</li>
+			<!--If User Is Login In Our System-->
+			<li>
+				<!--
+				if it is student then link is  
+				<a href="studentInfo.html">My Info</a>
+				if it is employee then link is 
+				<a href="employeeInfo.html">My Info</a>
+				if it is worker then link to 
+				<a href="workerInfo.html">My Info</a>
+			-->
+				<a href="teacherInfo.html">My Info</a>
+			</li>
+			<li>
+				<a href="contact.html">Contact</a>
+			</li>
+			<li>
+				<a href="signIn.html">sign in</a>
+			</li>
+			<!--if user is login show this link-->
+			<li>
+				<a href="signOut.html">sign out</a>
+			</li>
+			<!--else show this link -->
+			<li>
+				<a href="login.html">Login</a>
+			</li>
+			
+		</ul>
+		<label id="icon">
+			<i class="fa-solid fa-bars"></i>
+		</label>
+	</nav>
+	<section class="cont">
+		<label id="university">Kabul University</label>
+		<div id="underline"></div>
+	</section>
+	<div class="article">
+		<div>
+			<div id="departement">
+				
+			</div>
+			<div id="teacher">
+				
+			</div>
+		</div>
+		<div>
+			<div id="hacking">
+				
+			</div>
+			<div id="cafe">
+				
+			</div>
+		</div>
+		<div>
+			<div id="is">
+				
+			</div>
+			<div id="agriculture">
+				
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div id="contact">
+			<label>Contact</label>
+			<div class="ftemail">
+				<label><i class="fa-solid fa-envelope"></i>KUAF2023@gmail.com</label>
+			</div>
+			<div class="ftwhatsapp">
+				<label><i class="fa-brands fa-whatsapp"></i>(+93)798573634</label>
+			</div>
+			<div class="ftfacebook">
+				<label><i class="fa-brands fa-facebook"></i>Kabul University</label>
+			</div>
+		</div>
+		<div id="universityInfo">
+			<div>
+				<label>Information</label>
+				Kabul university was created at 1344.
+				Now It is the best University in Afghanistan.
+			</div>
+		</div>
+		<div id="developer">
+			<div>
+				<label>Developer</label>
+				This websit is developed by Heyday company. Heyday is your choice.
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#icon").click(function() {
+			$("ul").toggleClass("show");
+			var text=$("#icon").text();
+			if (text=="X"){
+				$("#icon").html('<i class="fa-solid fa-bars"></i>');
+			}else{
+			$("#icon").text("X");
+
+		}
+		});
+	$("a").click(function() {
+			$("ul").toggleClass("show");
+			var text=$("#icon").text();
+			if (text=="X"){
+				$("#icon").html('<i class="fa-solid fa-bars"></i>');
+			}else{
+			$("#icon").text("X");
+		}
+		});
+
+	$(".cont").hover(function(){
+		$(".cont #underline").fadeToggle(1500);
+		});
+	});
+</script>
+</body>
+</html>

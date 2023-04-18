@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="lib/all.css" type="text/css">
+    </head>
+    <body>
+        <nav class="menuNav">
+            <label id="logo">Kabul University</label>
+            <ul class="menuUl">
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li  class="active">
+                    <a href="signIn.html">sign in</a>
+                </li>
+                <!--if user is login show this link-->
+                <li>
+                    <a href="signOut.html">sign out</a>
+                </li>
+                <!--else show this link -->
+               <li>
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
+            <label id="icon">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </nav>
+        <div id="signInPage">
+            <form method="POST" action="login.html" onsubmit="return signInValidate();">
+                <label id="signInError" style="color: red;"></label>
+                <div>
+                    <label for="signInName" id="signInNameError">Name:</label>
+                    <input type="text" name="signInName" id="signInName" required onkeyup="signInNameValidate('#signInName','#signInNameError','Name:')">
+                </div>
+                <div>
+                    <label for="signInLastName" id="signInLastNameError">Last Name:</label>
+                    <input type="text" name="signInLastName" id="signInLastName" required onkeyup="signInNameValidate('#signInLastName','#signInLastNameError','Last Name:')">
+                </div>
+                <div>
+                    <label for="signInPhone" id="signInPhoneError">Phone:</label>
+                    <input type="text" name="signInPhone" id="signInPhone" required onkeyup="signInPhoneValidate();">
+                </div>
+                <div>
+                    <label for="signInType">Types:</label>
+                    <select name="signInType" id="signInType">
+                        <option value="employe">Employe</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="student">Student</option>
+                        <option value="worker">Worker</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="signInFaculty">Faculty:</label>
+                    <select name="signInFaculty" id="signInFaculty">
+                        <option value="computerScience">Computer Science</option>
+                        <option value="doctor">Tabyee Faculty</option>
+                        <option value="engineering">Engineering Faculty</option>
+                        <option value="naturelKnowledge">Naturel Knowledge</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="signInUsername" id="signInUsernameError">Username:</label>
+                    <input type="text" name="signInUsername" id="signInUsername" required onkeyup="signInUsernameValidate();">
+                </div>
+                <div>
+                    <label for="signInPassword" id="signInPasswordError">Password:</label>
+                    <input type="password" name="signInPassword" id="signInPassword" required onkeyup="signInPasswordValidate('#signInPassword','#signInPasswordError');">
+                </div>
+                <div>
+                    <label for="signInConfirm" id="signInConfirmError">Confirm Password:</label>
+                    <input type="password" name="signInConfirm" id="signInConfirm"  required onkeyup="signInPasswordValidate('#signInConfirm','#signInConfirmError');">
+                </div>
+                <div>
+                    <input type="submit" name="signInSubmit" id="signInSubmit" value="Sign In">
+
+                </div>
+            </form>
+
+
+
+
+        </div>
+
+
+
+
+
+        <script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#icon").click(function() {
+			$("ul").toggleClass("show");
+			var text=$("#icon").text();
+			if (text=="X"){
+				$("#icon").html('<i class="fa-solid fa-bars"></i>');
+			}else{
+			$("#icon").text("X");
+
+		}
+		});
+	$("a").click(function() {
+			$("ul").toggleClass("show");
+			var text=$("#icon").text();
+			if (text=="X"){
+				$("#icon").html('<i class="fa-solid fa-bars"></i>');
+			}else{
+			$("#icon").text("X");
+		}
+        });
+	});
+    </script>
+    <script src="javascript.js"></script>
+    </body>
+</html>

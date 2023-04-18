@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Activity</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="lib/all.css">
+</head>
+<body>
+	<!--This is for teachers-->
+        <nav class="menuNav">
+            <label id="logo" class="activity">Kabul University</label>
+            <form method="get">
+            	<input type="search" name="activitySearch" required placeholder="Search By title">
+            </form>
+            <ul class="menuUl">
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="teacherInfo.html">Private Info</a>
+                </li>
+                <li class="active">
+                    <a href="activity.html">Activity</a>
+                </li>
+                <!--if user is Teacher -->
+                <li>
+                    <a href="activityList.html">activities</a>
+                </li>
+                <!-- else
+					<li>
+                    <a href="signOut.html">sign out</a>
+                </li>
+                -->
+            </ul>
+            <label id="icon">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </nav>
+        <section class="myInfoContainer">
+        	<div>
+        		<h3>Home work for is</h3>
+        		<p>Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.</p>
+        		<form method="POST" enctype="multipart/form-data">
+        			<input type="file" name="anwser" required>
+        			<input type="submit" name="answerSubmit" id="answerSubmit">
+        		</form>
+        	</div>
+        	<div>
+        		<h3>Home work for is</h3>
+        		<p>Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.</p>
+        		<form method="POST" enctype="multipart/form-data">
+        			<input type="file" name="anwser" required>
+        			<input type="submit" name="answerSubmit" id="answerSubmit">
+        		</form>
+        	</div>
+        	<div>
+        		<h3>Home work for is</h3>
+        		<p>Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.</p>
+        		<form method="POST" enctype="multipart/form-data">
+        			<input type="file" name="anwser" required>
+        			<input type="submit" name="answerSubmit" id="answerSubmit">
+        		</form>
+        	</div>
+        	<div>
+        		<h3>Home work for is</h3>
+        		<p>Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.</p>
+        		<form method="POST" enctype="multipart/form-data">
+        			<input type="file" name="anwser" required>
+        			<input type="submit" name="answerSubmit" id="answerSubmit">
+        		</form>
+        	</div>
+        	<div>
+        		<h3>Home work for is</h3>
+        		<p>Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.</p>
+        		<form method="POST" enctype="multipart/form-data">
+        			<input type="file" name="anwser" required>
+        			<input type="submit" name="answerSubmit" id="answerSubmit">
+        		</form>
+        	</div>
+        	<div>
+        		<h3>Home work for is</h3>
+        		<p>Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.</p>
+        		<form method="POST" enctype="multipart/form-data">
+        			<input type="file" name="anwser" required>
+        			<input type="submit" name="answerSubmit" id="answerSubmit">
+        		</form>
+        	</div>
+        	<div>
+        		<h3>Home work for is</h3>
+        		<p>Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.</p>
+        		<form method="POST" enctype="multipart/form-data">
+        			<input type="file" name="anwser" required>
+        			<input type="submit" name="answerSubmit" id="answerSubmit">
+        		</form>
+        	</div>
+        	<div>
+        		<h3>Home work for is</h3>
+        		<p>Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.Write program which print hello and goodbey.</p>
+        		<form method="POST" enctype="multipart/form-data">
+        			<input type="file" name="anwser" required>
+        			<input type="submit" name="answerSubmit" id="answerSubmit">
+        		</form>
+        	</div>
+    </section>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        	$(document).ready(function(){
+		$("#icon").click(function() {
+			$("ul").toggleClass("show");
+			var text=$("#icon").text();
+			if (text=="X"){
+				$("#icon").html('<i class="fa-solid fa-bars"></i>');
+			}else{
+			$("#icon").text("X");
+
+		}
+		});
+	$("a").click(function() {
+			$("ul").toggleClass("show");
+			var text=$("#icon").text();
+			if (text=="X"){
+				$("#icon").html('<i class="fa-solid fa-bars"></i>');
+			}else{
+			$("#icon").text("X");
+		}
+        });
+	});
+    </script>
+
+</body>
+</html>

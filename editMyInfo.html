@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edit Informtion</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="lib/all.css" type="text/css">
+    </head>
+    <body>
+        <nav class="menuNav">
+            <label id="logo">Kabul University</label>
+            <ul class="menuUl">
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="signIn.html">sign in</a>
+                </li>
+                <!--if user is login show this link-->
+                <li>
+                    <a href="signOut.html">sign out</a>
+                </li>
+                <!--else show this link -->
+               <li>
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
+            <label id="icon">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </nav>
+        <div id="signInPage">
+            <form method="POST" action="login.html" onsubmit="return signInValidate();">
+                <label id="signInError" style="color: red;"></label>
+                <div>
+                    <label for="editInfoName" id="editInfoNameError">Name:</label>
+                    <input type="text" name="editInfoName" id="editInfoName" required onkeyup="signInNameValidate('#editInfoName','#editInfoNameError','Name:')">
+                </div>
+                <div>
+                    <label for="editInfoLastName" id="editInfoLastNameError">Last Name:</label>
+                    <input type="text" name="editInfoLastName" id="editInfoLastName" required onkeyup="signInNameValidate('#editInfoLastName','#editInfoLastNameError','Last Name:')">
+                </div>
+                <div>
+                    <label for="editInfoPhone" id="editInfoPhoneError">Phone:</label>
+                    <input type="text" name="editInfoPhone" id="editInfoPhone" required onkeyup="editInfoPhoneValidate();">
+                </div>
+                <div>
+                    <label for="editInfoType">Types:</label>
+                    <select name="editInfoType" id="editInfoType">
+                        <option value="employe">Employe</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="student">Student</option>
+                        <option value="worker">Worker</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="editInfoFaculty">Faculty:</label>
+                    <select name="editInfoFaculty" id="editInfoFaculty">
+                        <option value="computerScience">Computer Science</option>
+                        <option value="doctor">Tabyee Faculty</option>
+                        <option value="engineering">Engineering Faculty</option>
+                        <option value="naturelKnowledge">Naturel Knowledge</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="editInfoUsername" id="editInfoUsernameError">Username:</label>
+                    <input type="text" name="editInfoUsername" id="editInfoUsername" required onkeyup="editInfoUsernameValidate();">
+                </div>
+                <div>
+                    <label for="editInfoPassword" id="editInfoPasswordError">Password:</label>
+                    <input type="password" name="editInfoPassword" id="editInfoPassword" required onkeyup="signInPasswordValidate('#editInfoPassword','#editInfoPasswordError');">
+                </div>
+                <div>
+                    <label for="editInfoConfirm" id="editInfoConfirmError">Confirm Password:</label>
+                    <input type="password" name="editInfoConfirm" id="editInfoConfirm"  required onkeyup="editInfoPasswordValidate('#editInfoConfirm','#editInfoConfirmError');">
+                </div>
+                <div>
+                    <input type="submit" name="editInfoSubmit" id="editInfoSubmit" value="Edit">
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#icon").click(function() {
+			$("ul").toggleClass("show");
+			var text=$("#icon").text();
+			if (text=="X"){
+				$("#icon").html('<i class="fa-solid fa-bars"></i>');
+			}else{
+			$("#icon").text("X");
+
+		}
+		});
+	$("a").click(function() {
+			$("ul").toggleClass("show");
+			var text=$("#icon").text();
+			if (text=="X"){
+				$("#icon").html('<i class="fa-solid fa-bars"></i>');
+			}else{
+			$("#icon").text("X");
+		}
+        });
+	});
+    </script>
+    <script src="javascript.js"></script>
+    </body>
+</html>

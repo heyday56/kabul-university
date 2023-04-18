@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="lib/all.css">
+    </head>
+    <body>
+        <nav class="menuNav">
+            <label id="logo">Kabul University</label>
+            <ul class="menuUl">
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li class="active">
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="signIn.html">sign in</a>
+                </li>
+                <!--if user is login show this link-->
+                <li>
+                    <a href="signOut.html">sign out</a>
+                </li>
+                <!--else show this link -->
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
+            <label id="icon">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </nav>
+        <div id="contactPage">
+            <form action="home.html" method="post" onsubmit="return contactValidate();">
+                <label id="contactError" style="color:red;"></label>
+                <div>
+                    <label>Type Your Email:</label>
+                    <input type="email" id="contactEmail" required name="contactEmail">
+                </div>
+                <div>
+                    <label>Suggestion, Problem, ...</label>
+                    <textarea name="contactArticle" id="contactArticle" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Suggest" id="contactSubmit">
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#icon").click(function() {
+                    $("ul").toggleClass("show");
+                    var text=$("#icon").text();
+                    if (text=="X"){
+                        $("#icon").html('<i class="fa-solid fa-bars"></i>');
+                    }else{
+                    $("#icon").text("X");
+        
+                }
+                });
+            $("a").click(function() {
+                    $("ul").toggleClass("show");
+                    var text=$("#icon").text();
+                    if (text=="X"){
+                        $("#icon").html('<i class="fa-solid fa-bars"></i>');
+                    }else{
+                    $("#icon").text("X");
+                }
+                });
+            });
+        </script>
+        <script type="text/javascript" src="javascript.js"></script>
+    </body>
+</html>

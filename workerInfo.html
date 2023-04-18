@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Worker Information</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="lib/all.css" type="text/css">
+        
+    </head>
+    <body>
+        <!--This is for worker-->
+        <nav class="menuNav">
+            <label id="logo">Kabul University</label>
+            <ul class="menuUl">
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li  class="active">
+                    <a href="workerInfo.html">Private Info</a>
+                </li>
+                <li>
+                    <a href="activity.html">Activity</a>
+                </li>
+                <li>
+                    <a href="signOut.html">sign out</a>
+                </li>
+            </ul>
+            <label id="icon">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </nav>
+        <section class="myInfoContainer">
+            <div class="myInfoPrivate">
+                   <a href="editMyInfo.html"><label for="workerLabelName">Name: Khaliq</label></a>
+                   <a href="editMyInfo.html"><label for="workerLabelLastName">Last Name: Khaliqi</label></a>                    
+                   <a href="editMyInfo.html"> <label for="workerLabelPhone">Phone: 0798573635</label></a>
+            </div>
+            <div class="myInfoWork">
+                <a href="editMyInfo.html"><label for="workerLabelType">Types:Cleaner</label></a>
+                <a href="editMyInfo.html"><label for="workerLabelFaculty">Faculty:Computer Science</label></a>         
+            </div>
+            <div class="myInfoAccount">
+                <a href="editMyInfo.html"><label for="workerLabelUserName">UserName:khaliq</label></a>
+                <a href="editMyInfo.html"><label for="workerLabelPassword">Password:12345678</label></a>
+            </div>
+        </section>
+        <script src="jquery.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        	$(document).ready(function(){
+		$("#icon").click(function() {
+			$("ul").toggleClass("show");
+			var text=$("#icon").text();
+			if (text=="X"){
+				$("#icon").html('<i class="fa-solid fa-bars"></i>');
+			}else{
+			$("#icon").text("X");
+
+		}
+		});
+	$("a").click(function() {
+			$("ul").toggleClass("show");
+			var text=$("#icon").text();
+			if (text=="X"){
+				$("#icon").html('<i class="fa-solid fa-bars"></i>');
+			}else{
+			$("#icon").text("X");
+		}
+        });
+	});
+     </script>
+    </body>
+</html>
